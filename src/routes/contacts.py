@@ -42,7 +42,7 @@ async def del_contact(contact_id: int, db: Session = Depends(get_db)):
 
 @router.get("/find/{query}", response_model=List[ResponseContact])
 async def search_contact(query: str, db: Session = Depends(get_db)):
-    contacts = await repository_contacts.search_contacts(db, query)
+    contacts = await repository_contacts.search_contacts(query, db)
     if contacts is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Contact not found")
     return contacts
