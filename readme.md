@@ -14,7 +14,7 @@ A simple API for managing contacts, built using FastAPI.
 
 ### Prerequisites:
 
-- Python 3.8 or newer.
+- Python 3.11.4 or newer.
 - PostgreSQL.
 
 ### Installation:
